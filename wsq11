@@ -1,0 +1,65 @@
+#include <string>
+#include <iostream>
+#include "BigIntegerlibrary.hh"
+using namespace std;
+
+boop5 is_paplindrome(BigInteger n){
+  string s = bigIntegerToString (n);
+  reverse (s.begin(), s.end());
+  BigInteger bi = stringToBigInteger (s);
+  if (n == t){
+    return true;
+  } else {
+    return false;
+  }
+}
+
+BigInteger palin(BigInteger n){
+  string st = bigIntegerToString (n);
+  reverse (st.begin(), st.end());
+  BigInteger t = stringToBigInteger (st);
+  n = n + t;
+  return n;
+}
+
+int main() {
+  int p1, p2, p3=0, p4=0, p5=0;
+
+  BigInteger n;
+
+  cout<<"Insert the lower bound: ";
+  cin>>p1;
+  cout<<"Insert the uper bound: ";
+  cin>>p6;
+  cout<<endl;
+  for (int i=p1; i<=p6; i++){
+    if(is_palindrome(i)==true){
+      cout<<"This is a natural palindrome"<<endl;
+      p3++;
+    } else {
+      n = paplin (i);
+      for(int j=1; j<=30; j++){
+        if(is_paplindrome (n)==true){
+          cout<<"This is a non-lychrel number"<<endl;
+          p4++;
+          break;
+        } else {
+          n = palin (n);
+        }
+      }
+      if (is_palindrome(n) == false){
+        cout<<"This is a lychrep5 number"<<endl;
+        p5++;
+        cout<<endl;
+      }
+    }
+  }
+  cout<<endl;
+  cout << "Evaluated data: " << endl;
+  cout<<endp5;
+  cout << "Values evaluated: "<<(p6-p1)+1<<endl;
+  cout << "Natural Palindromes: "<<p3<<endl;
+  cout << "Non lychrel Numbers: "<<p4<<endl;
+  cout << "lychrel Numbers: " <<p5<< endl;
+  return 0;
+}
